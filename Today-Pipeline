@@ -1,0 +1,14 @@
+def hello="Welcome Hindhu LifeStyle"
+pipeline {
+     agent{
+        label 'BuildServer'
+    }
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
