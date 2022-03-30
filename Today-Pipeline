@@ -9,7 +9,7 @@ pipeline {
     stages {
           stage("Pull Source Code") {
           steps{
-              git credentialsId: 'Wed-Git', url: 'https://github.com/vamshikrishnakalleti/Maven-Java-Project.git '
+              git credentialsId: 'Wed-Git', url: 'https://github.com/vamshikrishnakalleti/Maven-Java-Project.git'
            }
        stage("Compile The Source Code") {
           steps{
