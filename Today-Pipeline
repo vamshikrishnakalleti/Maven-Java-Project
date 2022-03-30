@@ -13,7 +13,8 @@ pipeline {
            }
        stage("Compile The Source Code") {
           steps{
-             mvn clean compile
+            // Run Maven on a Unix agent.
+                 sh "mvn clean compile"
            }
           
           }
