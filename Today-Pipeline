@@ -1,14 +1,18 @@
-def hello="Welcome Hindhu LifeStyle"
 pipeline {
-     agent{
-        label 'BuildServer'
+    agent{
+         label "BuildServer"
     }
-
+    tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "maven3"
+    }
     stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World'
-            }
-        }
+          stage("Pull Source Code") {
+          steps{
+              git credentialsId: 'Wed-Git', url: 'https://github.com/vamshikrishnakalleti/Maven-Java-Project.git '
+           }
+          
+          }
     }
+    
 }
