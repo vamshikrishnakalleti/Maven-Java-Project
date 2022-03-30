@@ -11,11 +11,7 @@ pipeline {
           steps{
               git credentialsId: 'Wed-Git', url: 'https://github.com/vamshikrishnakalleti/Maven-Java-Project.git'
            }
-       stage("Compile The Source Code") {
-          steps{
-            // Run Maven on a Unix agent.
-                 sh "mvn clean compile"
-           }
+       
           
           }
     }
